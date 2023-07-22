@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // JavaScript to handle form submission using AJAX
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector("form");
+            var resultDiv = document.getElementById("result");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Create a new FormData object to store form data
+                var formData = new FormData(form);
+
+                // Send a POST request to the Flask server
+                fetch("/login", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(function (response) {
+                    return response.text(); // Parse response as text
+                })
+                .then(function (message) {
+                    // Update the content of the resultDiv with the login result
+                    resultDiv.innerHTML = message;
+                })
+                .catch(function (error) {
+                    console.error("Error:", error);
+                    // Display an error message if something goes wrong
+                    resultDiv.innerHTML = '<span style="color:red">An error occurred during login.</span>';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <div id="result" style="padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <!-- The login result will be displayed here -->
+    </div>
+</body>
+</html>
