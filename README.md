@@ -13,7 +13,7 @@ Follow the steps below to set up and use the EZphish script:
 ### Setup
 
 1. Clone this repository to your local machine using command:
-`git clone https://github.com/H4D0cKz/EZphish`
+`git clone https://github.com/WholeL0ttaDumbSh1tH4D0cKz/Ezphish`
 2. Make sure you have the required dependencies installed:
    - Python
    - Flask
