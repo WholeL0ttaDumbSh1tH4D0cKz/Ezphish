@@ -26,13 +26,13 @@ Follow the steps below to set up and use the EZphish script:
 ### Running the Main Script
 
 1. Navigate to the root directory of the project.
+2. run command `gcc main.c -o main`
 
-2. Run the main script using the command:
+3. Run the main script using the command:
 ./main
 ## Supported Sites
 - Adobe
 - Amazon
-- Apple
 - Badoo
 - Bitcoin
 - Devianart
@@ -68,6 +68,8 @@ Follow the steps below to set up and use the EZphish script:
 - Yahoo
 - Yandex
 
+--and maybe more to come
+
 
 ## Disclaimer
 
@@ -76,3 +78,6 @@ This script is for educational and testing purposes only. Do not use it for ille
 ## License
 
 This project is licensed under the [MIT License.
+
+## HELP AND SUPPORT
+If any problems with this script contact me via discord: h4d0ckz
