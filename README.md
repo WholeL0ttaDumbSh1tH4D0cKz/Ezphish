@@ -75,9 +75,5 @@ Follow the steps below to set up and use the EZphish script:
 
 This script is for educational and testing purposes only. Do not use it for illegal activities or to harm others. The creators of this script are not responsible for any misuse or damage caused by it.
 
-## License
-
-This project is licensed under the [MIT License.
-
 ## HELP AND SUPPORT
 If any problems with this script contact me via discord: h4d0ckz
